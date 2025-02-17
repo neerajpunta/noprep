@@ -15,6 +15,7 @@ body, html {
   font-style: normal;
 }
 /* Header */
+
 .header {
     position: fixed;
     top: 0;
@@ -97,6 +98,12 @@ body, html {
     padding: 20px;
 }
 
+/*responsive*/
+@media (max-width: 768px) {
+    .book-now{
+        display:none;
+    }
+}
 /* Hero Content */
 .hero-content {
     position: relative;
@@ -214,6 +221,7 @@ body, html {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+	padding-bottom:50px;
 }
 
 /* Individual Image Containers */
@@ -227,13 +235,13 @@ body, html {
 /* Headings */
 .gallery-item h3 {
     font-size: 1.5em;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
 
 /* Images */
 .gallery-item img {
-    width: 60%;
-    height: 70%;
+    width:100%;
+    height:100%;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -246,12 +254,17 @@ body, html {
     }
 }
 
+
 /*--END--*/
 /*--JOURNEY--*/
+#page-wrapper{
+	  background-image: linear-gradient(to right,#f0d78b 0,#d6ad60 16%,#c49959 32%,#f5dd8d 50%,#f9f0c3 67%,#eccc83 83%,#bc9152 98%);
+}
 .page-wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+			  
 	
         }
 
@@ -264,11 +277,12 @@ body, html {
         .header-block h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+			color:#111;
         }
 
         .header-block p {
             font-size: 1.1em;
-            color: white;
+            color: #222;
         }
 .journey-stages {
             display: flex;
