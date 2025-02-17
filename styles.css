@@ -517,13 +517,10 @@ align-items: center;
             -webkit-text-fill-color: transparent;
         }
 
-        .pricing-table p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
+     
 
         .price {
-            font-size: 1em;
+            font-size: 1.2em;
             font-weight: bold;
             color: #ff7e5f;
         }
@@ -537,6 +534,12 @@ align-items: center;
             font-size: 1em;
             color: #aaa;
             margin-top: 10px;
+        }
+  .war{
+            font-size:0.8em;
+            color: #aaa;
+            margin-top: 10px;
+			text-align:right;
         }
 
         @media (max-width: 768px) {
