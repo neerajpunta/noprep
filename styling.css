@@ -1,0 +1,53 @@
+
+
+.benefits, .process, .cta {
+    padding: 60px 20px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefit-item {
+    flex: 1;
+    text-align: center;
+}
+
+.steps .step {
+    background: grey;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.cta {
+    text-align: center;
+    background-image: linear-gradient(to right,#f0d78b 0,#d6ad60 16%,#c49959 32%,#f5dd8d 50%,#f9f0c3 67%,#eccc83 83%,#bc9152 98%);
+    color: Black;
+}
+
+.cta .btn {
+    background: Black;
+    color: white;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta .btn:hover
+{
+    background-image: linear-gradient(to right,#f0d78b 0,#d6ad60 16%,#c49959 32%,#f5dd8d 50%,#f9f0c3 67%,#eccc83 83%,#bc9152 98%);
+	color:black;
+}
+.button
+{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+	
