@@ -9,6 +9,105 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script>
+	- https://www.googletagmanager.com/gtm.js?id=GTM-M6W4FKKZ
+- (function(w,d,s,l,i){
+            w[l]=w[l]||[]; w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M6W4FKKZ'); // Replace with your GTM ID
+- window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        // Track CTA Button Clicks
+        document.getElementById('register-btn').addEventListener('click', function() {
+            gtag('event', 'register_click', {
+                'event_category': 'Engagement',
+                'event_label': 'Hero Register Button'
+            });
+        });
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                gtag('event', 'offer_cta_click', {
+                    'event_category': 'Engagement',
+                    'event_label': this.textContent
+                });
+            });
+        });
+        // Enhanced scroll tracking
+        let scrollMarkers = { 25: false, 50: false, 75: false, 90: false };
+        window.addEventListener('scroll', function() {
+            let scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            Object.keys(scrollMarkers).forEach(marker => {
+                if (!scrollMarkers[marker] && scrollPercent >= parseInt(marker)) {
+                    scrollMarkers[marker] = true;
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'Engagement',
+                        'event_label': ${marker}% Scrolled,
+                        'value': parseInt(marker)
+                    });
+                }
+            });
+        });
+        // Track time spent on page
+        let startTime = new Date();
+        window.addEventListener('beforeunload', function() {
+            let endTime = new Date();
+            let timeSpent = Math.round((endTime - startTime) / 1000);
+            gtag('event', 'time_spent', {
+                'event_category': 'Engagement',
+                'event_label': 'Time on Page',
+                'value': timeSpent
+            });
+        });
+        // Form submission tracking for Elfsight form
+        document.addEventListener('elfsightFormSubmitted', function() {
+            gtag('event', 'form_submission', {
+                'event_category': 'Form',
+                'event_label': 'Contact Form Submission'
+            });
+        });
+        // Section visibility tracking with ScrollMagic
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+            const controller = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                triggerElement: section,
+                triggerHook: 0.9,
+                reverse: false,
+            })
+            .on("enter", () => {
+                gsap.fromTo(section,
+                    { opacity: 0, y: 50 },
+                    { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+                );
+                gtag('event', 'section_view', {
+                    'event_category': 'Content',
+                    'event_label': ${section.className} Viewed
+                });
+            })
+            .addTo(controller);
+        });
+        // Track feature card interactions
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                gtag('event', 'feature_hover', {
+                    'event_category': 'Engagement',
+                    'event_label': this.querySelector('h3').textContent
+                });
+            });
+        });
+        // Track benefit list interactions
+        document.querySelectorAll('.benefit-list li').forEach(benefit => {
+            benefit.addEventListener('mouseenter', function() {
+                gtag('event', 'benefit_hover', {
+                    'event_category': 'Engagement',
+                    'event_label': this.textContent
+                });
+            });
+        }); </script>
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9K9W8LFSW"></script>
 <script>
