@@ -405,7 +405,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FontAwesome Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-
+<script>
+        function closePopup() {
+            document.querySelector(".popup-overlay").style.display = "none";
+        }
+        window.onload = function () {
+            document.querySelector(".popup-overlay").style.display = "flex";
+        };
+    </script>
 	
 	  <footer>
         <div class="footer-container">
