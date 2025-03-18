@@ -17,7 +17,7 @@ if ($data) {
 
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: no-reply@yourdomain.com" . "\r\n";
+    $headers .= "From: no-reply@mate4tech.com.au" . "\r\n";
 
     mail($to, $subject, $message, $headers);
 }
