@@ -330,5 +330,69 @@ body {
 		/*COOKIES END*/
 		
 		/*COMPARISION*/
-
+  body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+		
+        .conts {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .secti {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .rw {
+            width: 100%;
+            text-align: center;
+        }
+        .com {
+            flex: 1;
+            padding: 20px;
+            min-width: 300px;
+        }
+        .ita {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .comparison-text {
+            color: White;
+            font-size: 40px;
+            font-weight: bold;
+        }
+		.comparison-texto
+		{
+			color:#F9EFC1;
+            font-size:20px;
+            font-weight: bold;
+		}
+        .list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .list li {
+            margin: 10px 0;
+            color: #C79C5A;
+        }
 		/*end*/
+		/*process*/
+		.process-item  img
+		{
+			width:250px;
+			height:250px;
+			border-radius:12px;
+		}
+		
+		/*end*/
+		
