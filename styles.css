@@ -351,6 +351,7 @@ body, html {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; /* Distribute columns evenly */
+			text-align-last:left;
         }
 
         .footer-column {
@@ -392,6 +393,7 @@ body, html {
 
         .social-icons a {
             color: #fff;
+			text-align-last:left;
             font-size: 1.2rem; /* Adjust icon size */
         }
 

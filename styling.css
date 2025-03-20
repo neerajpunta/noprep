@@ -59,10 +59,11 @@ align-items: center;
             color: ;
         }
 
-        .wrapper {
+        .wrappr {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+			text-align-last:left;
         }
 
         .heading {
@@ -77,11 +78,13 @@ align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 20px;
+			
         }
 
         .left-box {
             flex: 1;
             min-width: 300px;
+			
         }
 
         .right-box {
