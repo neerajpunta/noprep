@@ -154,16 +154,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="info-box">
             <h4>Prof. John</h4>
             <h5>Scientific Director</h5>
-            <p>John Echavarria is a specialist in implantology and prosthodontics from Colombia with extensive experience in the area,
-			thousands of dental implants, hundreds of all on 4 under his supervision, 
-			his work as a consultant in some of the most important implant companies 
-			in the country. 
-			They credit him as a reference when facing highly complex cases. 
-			John also enjoys teaching and has taught implant and all on 
-			4 courses for dentists and has his own implant surgery education company. 
-			With his great experience, Dr John will be in charge of coordinating
-			the multidisciplinary teams to ensure that our patients obtain
-			the highest quality treatments and obtain the best results.</p>
+            <p>Dr. John, our esteemed scientific director,
+			brings over 30 years of extensive experience as a highly 
+			skilled dentist with a specialized focus in implants and prosthodontics.
+			His deep expertise and unwavering commitment to excellence ensure that 
+			every patient receives personalized care of the highest standard. 
+			With his vast knowledge, Dr. John is dedicated to crafting smiles that are not 
+			only aesthetically beautiful but also fully functional, comfortable, 
+			and designed to stand the test of time.
+
+			To achieve these exceptional results, Dr. John employs a comprehensive and meticulous approach to treatment planning. The analyses conducted as part of your customized treatment plan are thorough and multifaceted, encompassing photographic analysis to assess aesthetics and alignment, occlusal analysis to evaluate bite and jaw function, soft tissue analysis to ensure gum health and harmony, and joint analysis to address any temporomandibular joint concerns. This detailed, multi-dimensional evaluation allows us to develop a precise and tailored treatment strategy, ensuring that we identify and recommend the most effective techniques and solutions for your unique case. Under Dr. John’s expert guidance, you can trust that your dental care will be both transformative and enduring.</p>
            <!-- <a href="#" class="learn-more">Learn More</a>-->
         </div>
     </div>
@@ -177,13 +177,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="info-box">
             <h4>Dr. Amit</h4>
-            <p class="para">Dr. Amit Deveshvar graduated as a dentist in India in 1997. Later, Amit went to study advanced dental skills at Otago University in New Zealand. Having worked in 3 countries – India, New Zealand and Australia, Amit has incorporated the best that each country had to offer and strived to be an empathetic dentist with exceptional clinical skills. 
-			With over 25 years experience in dentistry, Amit very quickly found his niche in dental surgeries with a special interest in extracting complex wisdom teeth. 
-			This love for surgeries grew and Amit started to place implants in 2015. 
-			This partnership with implants grew when Amit met his mentor Dr John Echavarria
-			(Specialist Implantologist and Prosthodontist). 
-			John took Amit under his wings and taught him more complex surgeries including All on X procedures and extensive sinus lift surgeries.</p>
-
+            <p class="para">Meet Dr. Amit Deveshvar, a distinguished cosmetic dentist with 
+			over 25 years of experience across three countries.
+			Renowned for his expertise in transforming smiles, Dr. Deveshvar specializes in crowns, 
+			veneers, and other aesthetic treatments, blending artistry with precision. 
+			His global practice has honed a patient-centered approach, ensuring exceptional results tailored to individual needs. Recently, he expanded his skill set to include no-prep veneers, a cutting-edge option for minimally invasive smile enhancements. Dr. Deveshvar incorporates advanced smile design techniques and mock-ups into every treatment, allowing patients to preview their new smile before committing. With a career spanning decades and continents, he brings unmatched knowledge and innovation to cosmetic dentistry. Whether you seek a subtle upgrade or a complete smile makeover, Dr. Deveshvar delivers stunning, natural outcomes. 
+			Book a consultation today and discover the difference experience makes.
             <!--<a href="#" class="learn-more">Learn More</a>-->
         </div>
     </div>
@@ -222,11 +221,105 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 	
 	<!--Before/after-->
+	
 	<div id="before-after">
 		
 <section class="transformation-section">
         <h2>Flawless Transformation</h2>
-        <div class="image-container">
+		<!--SLIDER-->
+<div class="carousel-container">
+  <div class="carousel">
+        <div class="slide"> <img src="asset/slider/image.png" alt="Image 1"></div>
+    <div class="slide"> <img src="asset/slider/image2.png" alt="Image 2"></div>
+    <div class="slide"> <img src="asset/slider/image3.png" alt="Image 3"></div>
+    <div class="slide"> <img src="asset/slider/image4.png" alt="Image 4"></div>
+    <div class="slide"> <img src="asset/slider/image5.png" alt="Image 5"></div>
+    <div class="slide"> <img src="asset/slider/image6.png" alt="Image 6"></div>
+	<div class="slide"> <img src="asset/slider/image7.png" alt="Image 1"></div>
+    <div class="slide"> <img src="asset/slider/image8.png" alt="Image 2"></div>
+    <div class="slide"> <img src="asset/slider/image9.png" alt="Image 3"></div>
+    <div class="slide"> <img src="asset/slider/image10.png" alt="Image 4"></div>
+    <div class="slide"> <img src="asset/slider/image11.png" alt="Image 5"></div>
+    <div class="slide"> <img src="asset/slider/image12.png" alt="Image 6"></div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-prev">&#10094;</button>
+  <img class="lightbox-content">
+  <button class="lightbox-next">&#10095;</button>
+  <span class="close" id="lightbox-close">&times;</span>
+</div>
+<script>
+    const carousel = document.querySelector(".carousel");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  let index = 0;
+  let interval;
+
+  function startCarousel() {
+    interval = setInterval(() => {
+      index = (index + 1) % totalSlides;
+      updateCarousel();
+    }, 2000);
+  }
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * (100 / 3)}%)`;
+  }
+
+  document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % totalSlides;
+    updateCarousel();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+
+  carousel.addEventListener("mouseover", () => clearInterval(interval));
+  carousel.addEventListener("mouseleave", startCarousel);
+
+  let lightboxIndex = 0;
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.querySelector(".lightbox-content");
+  const images = document.querySelectorAll(".slide img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  images.forEach((img, i) => {
+    img.addEventListener("click", (e) => {
+      lightboxIndex = i;
+      updateLightbox();
+      lightbox.style.display = "flex";
+    });
+  });
+
+  function updateLightbox() {
+    lightboxImage.src = images[lightboxIndex].src;
+  }
+
+  lightboxClose.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  document.querySelector(".lightbox-prev").addEventListener("click", () => {
+    lightboxIndex = (lightboxIndex - 1 + images.length) % images.length;
+    updateLightbox();
+  });
+
+  document.querySelector(".lightbox-next").addEventListener("click", () => {
+    lightboxIndex = (lightboxIndex + 1) % images.length;
+    updateLightbox();
+  });
+
+  startCarousel();
+
+</script>
+	<!--END-SLIDER-->
+     <!--   <div class="image-container">
 			 <div class="column">
                 <img src="asset/images/before.png" alt="Before Image">
                 <h3>Before</h3>
@@ -236,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h3>After</h3>
             </div>
            
-        </div>
+        </div>--->
     </section>
 	
 	

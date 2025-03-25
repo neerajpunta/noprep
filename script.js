@@ -14,3 +14,5 @@ document.getElementById('closeModal').addEventListener('click', () => {
 document.getElementById('closePopup').addEventListener('click', () => {
     document.getElementById('cookiePopup').style.display = 'none';
 });
+
+
