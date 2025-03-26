@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!--SLIDER-->
 <div class="carousel-container">
   <div class="carousel">
-        <div class="slide"> <img src="asset/slider/image.png" alt="Image 1"></div>
+    <div class="slide"> <img src="asset/slider/image.png" alt="Image 1"></div>
     <div class="slide"> <img src="asset/slider/image2.png" alt="Image 2"></div>
     <div class="slide"> <img src="asset/slider/image3.png" alt="Image 3"></div>
     <div class="slide"> <img src="asset/slider/image4.png" alt="Image 4"></div>
@@ -252,8 +252,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="lightbox-next">&#10095;</button>
   <span class="close" id="lightbox-close">&times;</span>
 </div>
-<script>
-    const carousel = document.querySelector(".carousel");
+<script>  
+ const carousel = document.querySelector(".carousel");
   const slides = document.querySelectorAll(".slide");
   const totalSlides = slides.length;
   let index = 0;
@@ -263,11 +263,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     interval = setInterval(() => {
       index = (index + 1) % totalSlides;
       updateCarousel();
-    }, 2000);
+    }, 3000);
   }
 
   function updateCarousel() {
-    carousel.style.transform = `translateX(-${index * (100 / 3)}%)`;
+    carousel.style.transform = `translateX(-${index * (100 / (window.innerWidth < 768 ? 1 : 3))}%)`;
   }
 
   document.querySelector(".next").addEventListener("click", () => {
@@ -315,8 +315,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     updateLightbox();
   });
 
-  startCarousel();
+  window.addEventListener("resize", updateCarousel);
 
+  startCarousel();
 </script>
 	<!--END-SLIDER-->
      <!--   <div class="image-container">

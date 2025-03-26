@@ -313,7 +313,7 @@ body {
 		
 		/*end*/
 		/*CAROUSEL*/
-.carousel-container {
+   .carousel-container {
     position: relative;
     width: 80%;
     margin: auto;
@@ -379,9 +379,14 @@ body {
     padding: 10px;
     border-radius: 50%;
   }
-  
 
-  .close { top: 100px; right: 40px; }
+  .close { top: 80px; right: 40px; }
   .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
   .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+  @media screen and (max-width: 768px) {
+    .slide {
+      min-width: 100%;
+    }
+  }
 		/*end*/
